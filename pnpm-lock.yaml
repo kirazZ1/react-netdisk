@@ -2,6 +2,7 @@ lockfileVersion: 5.3
 
 specifiers:
   '@ant-design/icons': ^4.7.0
+  '@types/node': ^17.0.12
   '@types/react': ^17.0.33
   '@types/react-dom': ^17.0.10
   '@types/react-router-dom': ^5.3.3
@@ -25,6 +26,7 @@ dependencies:
   react-router-dom: registry.npmmirror.com/react-router-dom/6.2.1_react-dom@17.0.2+react@17.0.2
 
 devDependencies:
+  '@types/node': registry.npmmirror.com/@types/node/17.0.12
   '@types/react': registry.npmmirror.com/@types/react/17.0.38
   '@types/react-dom': registry.npmmirror.com/@types/react-dom/17.0.11
   '@vitejs/plugin-react': registry.npmmirror.com/@vitejs/plugin-react/1.1.4
@@ -897,6 +899,12 @@ packages:
     name: '@types/history'
     version: 4.7.11
     dev: false
+
+  registry.npmmirror.com/@types/node/17.0.12:
+    resolution: {integrity: sha512-4YpbAsnJXWYK/fpTVFlMIcUIho2AYCi4wg5aNPrG1ng7fn/1/RZfCIpRCiBX+12RVa34RluilnvCqD+g3KiSiA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@types/node/download/@types/node-17.0.12.tgz}
+    name: '@types/node'
+    version: 17.0.12
+    dev: true
 
   registry.npmmirror.com/@types/prop-types/15.7.4:
     resolution: {integrity: sha1-/PcgXCXf95Xuea8eMNosl5CAjxE=, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@types/prop-types/download/@types/prop-types-15.7.4.tgz}

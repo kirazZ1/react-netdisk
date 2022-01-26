@@ -1,14 +1,17 @@
 /*
- * @Author: your name
+ * @Author: KiraZz1
  * @Date: 2022-01-25 15:17:39
- * @LastEditTime: 2022-01-25 19:12:26
+ * @LastEditTime: 2022-01-26 15:23:24
  * @LastEditors: Please set LastEditors
- * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
- * @FilePath: \react-netdisk\src\App.tsx
+ * @Description: App.tsx
  */
 
 import Login from "./pages/login"
 import { Route, Routes} from 'react-router-dom';
+import { ProtectedRoute } from './components/ProtectedRoute'
+import { isAuth } from './utils/auth'
+import NotFound  from './pages/404'
+import Dashboard from './pages/dashboard'
 import './App.css'
 function App() {
 
@@ -16,7 +19,13 @@ function App() {
   return (
     <div className="App">
      <Routes>
-       <Route path="/login" element={Login()}/>
+       <Route path="/login" element={<Login/>}/>
+       <Route path="/dashboard" element={
+         <ProtectedRoute isAuth={isAuth}>
+           <Dashboard/>
+         </ProtectedRoute>
+       }></Route>
+       <Route path="*" element={<NotFound/>}/>
      </Routes>
     </div>
   )
